@@ -97,14 +97,14 @@ function rez(number1, number2) {
   if (number1 === number2) {
     return number1;
   }
+  
+  let sum = 0;
  
-  let sum = number1 + number2;
-
-  if ((number2 - number1) === 1) {
-    return sum;
+  for (let i = number1; i <= number2; i++) {
+    sum += i;
   }
- 
-  return sum + rez(++number1, --number2);
+  
+  return sum;
 }
 
 rez(1, 3);  // 6
